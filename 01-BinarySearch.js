@@ -1,8 +1,9 @@
-let arr = [1, 3, 5, 7, 9,11,13,15,17,19,21];
+function binario(bajo, alto, elemento){
+
 console.log(arr);
-let low = 0;
-let high = 10;
-let item = 6;
+let low = bajo;
+let high = alto;
+let item = elemento;
 
 console.log("Valor del Array con el valor mas alto: " + arr[high]);
 console.log("Valor del Array con el valor mas bajo: " + arr[low]);
@@ -27,3 +28,8 @@ while (low <= high) {
   }
   console.log("Valor del arreglo: arr[mid] " + arr[mid]);
 }
+}
+var arr = [1, 3, 5, 7, 9,11,13,15,17,19,21];
+let bajo =3;
+let high=10;
+let elemento=5;
