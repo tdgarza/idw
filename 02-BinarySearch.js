@@ -26,7 +26,7 @@ function binario(a,b,c){
         console.log("Valor del 2do IF: arr[mid] " + arr[mid]);
         }
         else {
-        low = mid + 1;
+        low = mid + 1
         console.log("Valor del Else: " + low);
           }
           console.log("Valor del arreglo: arr[mid] " + arr[mid]);
@@ -34,7 +34,7 @@ function binario(a,b,c){
     const bajo=0;
     const alto=10;
     const buscado=6;
-    const arr = [1, 3, 5, 7, 9,11,13,15,17,19,21];
+    const arr = [0,1,2,3,4,5,6,7,8,9,10];
     var suma = binario(bajo,alto,buscado);
     let mid;
     
