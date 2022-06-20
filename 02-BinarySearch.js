@@ -14,7 +14,8 @@ function binario(a,b,c){
         let guess = arr[mid];
         console.log("valor del Guess: " + guess);
         console.log("Final: " + arr[mid]);
-    if (guess == item) {
+    
+        if (guess == item) {
         arr[mid];
         console.log("Valor del 1er IF mid: " + mid);
         console.log("Valor del 1er IF: arr[mid] " + arr[mid]);
@@ -35,7 +36,7 @@ function binario(a,b,c){
     const alto=10;
     const buscado=6;
     const arr = [0,1,2,3,4,5,6,7,8,9,10];
-    var suma = binario(bajo,alto,buscado);
+    var valor = binario(bajo,alto,buscado);
     let mid;
     
    
