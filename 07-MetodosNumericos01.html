@@ -67,11 +67,14 @@ c) Si f(xl)f(xr) = 0, la raíz es igual a xr; termina el cálculo.
 
 function myFunction(){
    const g=9.8;
-   let t = document.getElementById("t").value;
-   let m = document.getElementById("m").value;
-   let v = document.getElementById("v").value;
+   let t = 10
+   let m = 68.1;
+   let v = 40;
    let xl = document.getElementById("xl").value;  
    let xu = document.getElementById("xu").value;
+
+  //while(error<=1){
+
    let xr=(parseInt(xl)+parseInt(xu))/2;
    let exponente=(xl/m)*t;
    let exponente1=(xu/m)*t;
@@ -88,11 +91,33 @@ function myFunction(){
    let fxu= (cociente1)*(1-e1)-v;
    console.log("Valor de la funcion f(xl): " +fxl);
    console.log("Valor de la funcion f(xu): " +fxu);
+   console.log("Multiplicacion de funciones: " +fxu*fxl);
   
+   if(fxl*fxu<0){
+    /*
+    Si f(xl)f(xr) < 0, entonces la raíz se encuentra dentro del subintervalo inferior o izquierdo. 
+    Por lo tanto, haga xu = xr y vuelva al paso 2.*/
+    console.log("Primer if")
+
+   }
+   if(fxl*fxu>0){
+    /*Si f(xl)f(xr) > 0, entonces la raíz se encuentra dentro del subintervalo superior o derecho. 
+    Por lo tanto, haga xl = xr y vuelva al paso 2 */
+    console.log("Segundo if")
+    
+   }
+
+    if(fxl==fxu){
+        /*Si f(xl)f(xr) = 0, la raíz es igual a xr; termina el cálculo.*/
+        console.log("Tercer if")
+    }
+   
+
     let text=xr;
 
 document.getElementById("sumando").innerHTML = text;  
 }
+//}
 </script>
 
 </body>
