@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Metodo de la Biseccion Sucesiva</h1>
+<h3>Paso 1: Elija valores iniciales inferior, xl, y superior, xu, que encierren la raíz, de forma tal que la función cambie de signo 
+en el intervalo. Esto se verifica comprobando que f(xl) f(xu) < 0.</h3>
+<h3>Paso 2: Una aproximación de la raíz xr se determina mediante:
+xr=xl + xu/2
+</h3>
+<h3>Paso 3: Realice las siguientes evaluaciones para determinar en qué subintervalo está la raíz:
+a) Si f(xl)f(xr) < 0, entonces la raíz se encuentra dentro del subintervalo inferior o izquierdo. 
+Por lo tanto, haga xu = xr y vuelva al paso 2.
+b) Si f(xl)f(xr) > 0, entonces la raíz se encuentra dentro del subintervalo superior o derecho. 
+Por lo tanto, haga xl = xr y vuelva al paso 2.
+c) Si f(xl)f(xr) = 0, la raíz es igual a xr; termina el cálculo.
+</h3> 
+
+<p>Por favor, introduce dos números:</p>  
+Funcion:<br>
+<img src="./formula1.png" style="width: 250px"; alt="formula">
+<br>
+<table>
+    <tr>
+    <th>Concepto</th>
+    <th>Valor</th>
+    </tr>
+    <tr>
+    <td>Valor caida libre: </td>
+    <td>Paracaidista masa: </td>
+    <td>Valor inicial inferior: </td>
+    <td>Valor inicial superior: </td>
+    </tr>
+
+<tr>
+    <td><input id="t" size="5"><br>  </td>
+    <td><input id="m" size="5"><br></td>
+    <td><input id="xl" size="5"><br> </td> 
+    <td><input id="xu" size="5"><br></td>
+</tr>
+</table>
+<button type="button" onclick="myFunction()">Procesar</button>  
+
+<p id="sumando"></p>  
+
+<script>
+
+function myFunction(){
+   const g=9.8;
+   let t = document.getElementById("t").value;
+   let m = document.getElementById("m").value;
+  
+    let xl = document.getElementById("xl").value;  
+    let xu = document.getElementById("xu").value;
+
+   
+    let xr=(parseInt(xl)+parseInt(xu))/2;
+    let text=xr;
+
+ 
+
+document.getElementById("sumando").innerHTML = text;  
+}
+</script>
+
+</body>
+</html>

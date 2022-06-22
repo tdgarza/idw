@@ -13,6 +13,7 @@ function binario(a,b,c){
     let low = a;
     let high = b;
     let item = c;
+    console.log("a: " + low);
 
     while (low <= high) {
         let mid = Math.floor((low + high) / 2);
@@ -30,17 +31,26 @@ function binario(a,b,c){
      }
         }
     }
-    const bajo=0; //elemento mas bajo
-    //const alto=10; //elemento mas alto de la lista, se podria hacer con un contador de elementos del arreglo, a buscarlo...
+    const bajo=0;
     var pantalla=prompt("Dame el valor buscado:");
     const buscado=pantalla;
-    const arr = [10,11,22,32,43,52,63,73,84,95,103];
-    //console.log("Lenght: " + arr.length);
+    
+    for(i=0;i<5;i++){
+        var arrayvalor=prompt("Dame los valores:");
+        const arr=new Array(pantalla);
+      arr.push (arrayvalor);   
+      console.log("Lenght: " + arr.length);
+    console.log("Valores: " + arrayvalor);
+    console.log("Final: " + arr);   
+    }
+    
+    
+   // arr.concat(arrayvalor);
+
+
     const altolenght= arr.length-1;
-    //console.log("Lenght 1: " + altolenght);
     var valor = binario(bajo,altolenght,buscado);
-    let mid;
-    console.log(binario(bajo,altolenght,buscado)); //perfecto, aqui aprendi que la funcion se llama de esta manera. ahora puedo manipular esto.
+    console.log(binario(bajo,altolenght,buscado));
 
 </script>
 </body>
