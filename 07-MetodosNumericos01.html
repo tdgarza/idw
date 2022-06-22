@@ -73,9 +73,11 @@ function myFunction(){
    let xl = document.getElementById("xl").value;  
    let xu = document.getElementById("xu").value;
 
-  //while(error<=1){
+  for(i=0;i<5;i++){
 
    let xr=(parseInt(xl)+parseInt(xu))/2;
+   console.log("valor del xr" +xr)
+    
    let exponente=(xl/m)*t;
    let exponente1=(xu/m)*t;
    console.log("Valor del exponente 1: " +exponente);
@@ -97,14 +99,16 @@ function myFunction(){
     /*
     Si f(xl)f(xr) < 0, entonces la raíz se encuentra dentro del subintervalo inferior o izquierdo. 
     Por lo tanto, haga xu = xr y vuelva al paso 2.*/
-    console.log("Primer if")
-
+    
+    xu=xr;
+    console.log("Primer if porque es negativo" +xr)
    }
    if(fxl*fxu>0){
     /*Si f(xl)f(xr) > 0, entonces la raíz se encuentra dentro del subintervalo superior o derecho. 
     Por lo tanto, haga xl = xr y vuelva al paso 2 */
-    console.log("Segundo if")
     
+    xl=xr;
+    console.log("Segundo if porque es positivo" +xr)
    }
 
     if(fxl==fxu){
@@ -117,7 +121,7 @@ function myFunction(){
 
 document.getElementById("sumando").innerHTML = text;  
 }
-//}
+}
 </script>
 
 </body>
