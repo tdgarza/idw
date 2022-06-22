@@ -1,0 +1,20 @@
+body{
+    background-color: rgb(127, 206, 255);
+}
+h1{
+    color: crimson;
+    text-shadow: 5px 5px 5px black;
+}
+h4{
+    color: rgb(255, 255, 255);
+    text-align: justify;
+    text-justify: inter-word;
+}
+p{
+    color: rgb(255, 255, 255);
+    text-align: justify;
+    text-justify: inter-word;
+}
+img{
+    filter: drop-shadow(5px 5px 5px rgba(255, 255, 255, 0.5));
+}
