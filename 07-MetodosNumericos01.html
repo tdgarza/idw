@@ -63,6 +63,7 @@ c) Si f(xl)f(xr) = 0, la raíz es igual a xr; termina el cálculo.
 
 <p style="background-color: yellow; color: #f1f1f1; font-weight: bold; color: black; font-size:20px" id="sumando">Resultado: </p>  
 
+
 <script>
 
 function myFunction(){
@@ -73,28 +74,33 @@ function myFunction(){
    let xl = document.getElementById("xl").value;  
    let xu = document.getElementById("xu").value;
 
-  for(i=0;i<5;i++){
+  for(i=0;i<10;i++){
 
-   let xr=(parseInt(xl)+parseInt(xu))/2;
-   console.log("valor del xr" +xr)
+   let xr=(parseFloat(xl)+parseFloat(xu))/2;
+   console.log("valor del xl " +xl +" Iteracion numero "+i)
+   console.log("valor del xu " +xu +" Iteracion numero "+i)
+   console.log("valor del xr " +xr +" Iteracion numero "+i)
     
    let exponente=(xl/m)*t;
    let exponente1=(xu/m)*t;
-   console.log("Valor del exponente 1: " +exponente);
+   //console.log("Valor del exponente 1: " +exponente);
    let e=Math.exp(exponente);
    let e1=Math.exp(exponente1);
-   console.log("Valor del exponente 2: " +e);
+   //console.log("Valor del exponente 2: " +e);
    let division=g*m;
    let cociente=division/xl;
    let cociente1=division/xu;
-   console.log("Valor de la division: " +cociente);
-   console.log("Valor de la division: " +cociente1);
+   //console.log("Valor de la division: " +cociente);
+   //console.log("Valor de la division: " +cociente1);
    let fxl= (cociente)*(1-e)-v;
    let fxu= (cociente1)*(1-e1)-v;
    console.log("Valor de la funcion f(xl): " +fxl);
    console.log("Valor de la funcion f(xu): " +fxu);
    console.log("Multiplicacion de funciones: " +fxu*fxl);
   
+
+
+
    if(fxl*fxu<0){
     /*
     Si f(xl)f(xr) < 0, entonces la raíz se encuentra dentro del subintervalo inferior o izquierdo. 
@@ -115,12 +121,34 @@ function myFunction(){
         /*Si f(xl)f(xr) = 0, la raíz es igual a xr; termina el cálculo.*/
         console.log("Tercer if")
     }
-   
 
+var body = document.getElementsByTagName("body")[0];
+var tabla   = document.createElement("table");
+var tblBody = document.createElement("tbody");
+var hilera = document.createElement("tr");
+
+    for (var j = 0; j < 1; j++) {
+      // Crea un elemento <td> y un nodo de texto, haz que el nodo de
+      // texto sea el contenido de <td>, ubica el elemento <td> al final
+      // de la hilera de la tabla
+      var celda = document.createElement("td");
+      var textoCelda = document.createTextNode("El valor de Xl: "+xl+", El valor de Xu: "+xu+", El valor de Xr:  "+xr);
+      celda.appendChild(textoCelda);
+      hilera.appendChild(celda);
+    }
+    tblBody.appendChild(hilera);
+    tabla.appendChild(tblBody);
+    body.appendChild(tabla);
+    tabla.setAttribute("cellspace", "10", "border", "1");
+
+  
     let text=xr;
 
 document.getElementById("sumando").innerHTML = text;  
+
+
 }
+
 }
 </script>
 
