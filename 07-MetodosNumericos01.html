@@ -74,13 +74,20 @@ function myFunction(){
    let xl = document.getElementById("xl").value;  
    let xu = document.getElementById("xu").value;
 
-  for(i=0;i<10;i++){
+var body = document.getElementsByTagName("body")[0];
+var tabla   = document.createElement("table");
+var tblBody = document.createElement("tbody");
+var hilera = document.createElement("tr");
 
+  for(i=0;i<10;i++){
+ 
    let xr=(parseFloat(xl)+parseFloat(xu))/2;
    console.log("valor del xl " +xl +" Iteracion numero "+i)
    console.log("valor del xu " +xu +" Iteracion numero "+i)
    console.log("valor del xr " +xr +" Iteracion numero "+i)
-    
+      
+
+
    let exponente=(xl/m)*t;
    let exponente1=(xu/m)*t;
    //console.log("Valor del exponente 1: " +exponente);
@@ -98,56 +105,51 @@ function myFunction(){
    console.log("Valor de la funcion f(xu): " +fxu);
    console.log("Multiplicacion de funciones: " +fxu*fxl);
   
-
-
-
    if(fxl*fxu<0){
     /*
     Si f(xl)f(xr) < 0, entonces la raíz se encuentra dentro del subintervalo inferior o izquierdo. 
     Por lo tanto, haga xu = xr y vuelva al paso 2.*/
-    
     xu=xr;
     console.log("Primer if porque es negativo" +xr)
    }
    if(fxl*fxu>0){
     /*Si f(xl)f(xr) > 0, entonces la raíz se encuentra dentro del subintervalo superior o derecho. 
     Por lo tanto, haga xl = xr y vuelva al paso 2 */
-    
     xl=xr;
     console.log("Segundo if porque es positivo" +xr)
    }
-
     if(fxl==fxu){
-        /*Si f(xl)f(xr) = 0, la raíz es igual a xr; termina el cálculo.*/
-        console.log("Tercer if")
+    /*Si f(xl)f(xr) = 0, la raíz es igual a xr; termina el cálculo.*/
+    console.log("Tercer if")
     }
-
-var body = document.getElementsByTagName("body")[0];
-var tabla   = document.createElement("table");
-var tblBody = document.createElement("tbody");
-var hilera = document.createElement("tr");
+    var hilera = document.createElement("tr");
 
     for (var j = 0; j < 1; j++) {
-      // Crea un elemento <td> y un nodo de texto, haz que el nodo de
-      // texto sea el contenido de <td>, ubica el elemento <td> al final
-      // de la hilera de la tabla
       var celda = document.createElement("td");
-      var textoCelda = document.createTextNode("El valor de Xl: "+xl+", El valor de Xu: "+xu+", El valor de Xr:  "+xr);
+      var textoCelda = document.createTextNode("El valor de Xl: "+xl);
       celda.appendChild(textoCelda);
       hilera.appendChild(celda);
-    }
+
+      for (var k = 0; k < 1; k++) {
+      var celda = document.createElement("td");
+      var textoCelda = document.createTextNode("El valor de Xu: "+xu);
+      celda.appendChild(textoCelda);
+      hilera.appendChild(celda);
+    
+      for (var l = 0; l < 1; l++) {
+      var celda = document.createElement("td");
+      var textoCelda = document.createTextNode("El valor de Xr: "+xr);
+      celda.appendChild(textoCelda);
+      hilera.appendChild(celda);
+    }}
     tblBody.appendChild(hilera);
+    }
+      let text=xr;
+      document.getElementById("sumando").innerHTML = text;  
+} 
     tabla.appendChild(tblBody);
     body.appendChild(tabla);
-    tabla.setAttribute("cellspace", "10", "border", "1");
-
-  
-    let text=xr;
-
-document.getElementById("sumando").innerHTML = text;  
-
-
-}
+    tabla.setAttribute("border", "1");
 
 }
 </script>
