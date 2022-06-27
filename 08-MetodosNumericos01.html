@@ -34,16 +34,13 @@
 </table>
 <button type="button" onclick="falsa()">Procesar</button>  
 
-<p style="background-color: yellow; color: #f1f1f1; font-weight: bold; color: black; font-size:20px" id="sumando">Resultado: </p>  
+<p style="background-color: #f8cdda; color: #f1f1f1; font-weight: bold; color: black; font-size:20px" id="sumando">Resultado: </p>  
 
 
 <img src="./formula2.png" alt="Falsa Posicion formula">
    <script>
-    function falsa(a,b,c){
-        const g=9.8;
-        const t = 10
-        const m = 68.1;
-        const v = 40;
+    function falsa(a,b){
+        
         let xl = document.getElementById("xl").value;
         let xu = document.getElementById("xu").value;
         console.log(xl);
@@ -56,31 +53,16 @@
         
         
 for(let i=0;i<10;i++){
-       
-            let exponente=-(xl/m)*t;
-            let exponente1=-(xu/m)*t;
-            let e=Math.exp(exponente);
-            let e1=Math.exp(exponente1);
-            let division=g*m;
-            let cociente=division/xl;
-            let cociente1=division/xu;
-            let fxl= (cociente)*(1-e)-v;
-            let fxu= (cociente1)*(1-e1)-v;
-            let xr=xu-(fxu*(xl-xu))/(fxl-fxu);
+    let fxl=Math.pow(xl, 10)-1;
+    let fxu=Math.pow(xu, 10)-1;
+    let xr=xu-((fxu*(xl-xu))/(fxl-fxu));
+    let fxr=Math.pow(xr, 10)-1;
 
-            let exponente2=-(xr/m)*t;
-            let e2=Math.exp(exponente2);
-            let cociente2=division/xr;
-            let fxr= (cociente2)*(1-e2)-v;
+            console.log("Fxl: " +"i: "+i +" xl: "+fxl);
+            console.log("Fxu: " +"i: "+i +" xu: "+fxu);
+            console.log("xr: " +"i: "+i +" xl: "+xr);
 
-            console.log("Valor de la funcion XL: " +"i: "+i +" xl: "+xl);
-            console.log("Valor de la funcion XU: " +"i: "+i +" xu: "+xu);
-            console.log("Valor de la funcion XR: " +"i: "+i +" xr: "+xr);
-            console.log("Valor de la funcion f(xl): " +fxl);
-            console.log("Valor de la funcion f(xu): " +fxu);
-            console.log("Valor de la funcion f(xr): " +fxr);
-            console.log("Multiplicacion de funciones: " +fxu*fxl);
-            console.log("Multiplicacion de funciones Fxl*Fxr: " +fxl*fxr);
+      
  
  
  if(fxl*fxr<0){

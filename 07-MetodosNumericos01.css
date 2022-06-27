@@ -1,8 +1,10 @@
 body{
-    background-color: rgb(127, 206, 255);
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, 
+    #1d2b64 35%, #f8cdda 100%);
 }
 h1{
-    color: crimson;
+    color: #f8cdda;
     text-shadow: 5px 5px 5px black;
 }
 h4{
@@ -22,12 +24,12 @@ p{
     text-justify: inter-word;
 }
 img{
-    filter: drop-shadow(5px 5px 5px rgba(43, 255, 0, 0.5));
+    filter: drop-shadow(5px 5px 5px #f8cdda );
 }
 table {
     border-collapse: separate;
     border-spacing: 2px;
-    background: rgb(55, 255, 0) url("gradient.gif") bottom left repeat-x;
+    background: #f8cdda;
     color: rgb(52, 122, 228);
  }
  td, th {
