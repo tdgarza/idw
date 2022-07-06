@@ -41,7 +41,8 @@
       </div>
 
 <div class="resultado">
-<p style="background-color: #f8cdda; color: #f1f1f1; font-weight: bold; color: black; font-size:20px" id="sumando">Resultado: </p>  
+<p style="background-color: #f8cdda; color: #f1f1f1; font-weight: bold; color: black; font-size:20px" 
+id="sumando">Resultado: </p>  
  <script>
     function falsa(a,b){
         
@@ -57,13 +58,11 @@
         var hilera = document.createElement("tr");
         var titols = ["1","2","3","4"];
         
-        
-for(let i=0;i<10;i++){
-
-    let fxl=Math.pow(xl, 10)-1;
-    let fxu=Math.pow(xu, 10)-1;
-    let xr=xu-((fxu*(xl-xu))/(fxl-fxu));
-    let fxr=Math.pow(xr, 10)-1;
+        for(let i=0;i<10;i++){
+            let fxl=Math.pow(xl, 10)-1;
+            let fxu=Math.pow(xu, 10)-1;
+            let xr=xu-((fxu*(xl-xu))/(fxl-fxu));
+            let fxr=Math.pow(xr, 10)-1;
 
             console.log("Fxl: " +"i: "+i +" xl: "+fxl);
             console.log("Fxu: " +"i: "+i +" xu: "+fxu);
