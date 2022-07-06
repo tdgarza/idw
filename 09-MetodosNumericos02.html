@@ -9,23 +9,20 @@
 </head>
 <body>
 
-    <div class="container">
+<div class="container">
         <div class="top"> <h1>Metodo de la Falsa Posicion</h1></div>
-        <div class="Informacion">    <p>Ésta es la fórmula de la falsa posición. El valor de xr calculado con la ecuación (5.7), 
+        <div class="info">    
+        <p>Ésta es la fórmula de la falsa posición. El valor de xr calculado con la ecuación (5.7), 
         reemplazará, después, a cualquiera de los dos valores iniciales, xl o xu, y da un valor de 
         la función con el mismo signo de f(xr). De esta manera, los valores xl y xu siempre encierran 
         la verdadera raíz. El proceso se repite hasta que la aproximación a la raíz sea adecuada. 
         El algoritmo es idéntico al de la bisección (figura 5.5), excepto en que la ecuación (5.7).
+        </p></div>
+<div class="imagen"><img src="./Falsaposicion.png" style="height: 300px;" alt="grafica de la falsa posicion"><br></div>
         
-</p></div>
-        <div class="datos">
-</div>
-        <div class="imagen"><img src="./Falsaposicion.png" style="height: 300px;" alt="grafica de la falsa posicion"><br>
-        </div>
-        <div class="tabla">
-          <div class="formula">
+<div class="datos">
 <h3>Formula de la falsa Posicion</h3>
-<img src="./formula2.png" alt="Falsa Posicion formula">           
+<img src="./formula2.png" alt="Falsa Posicion formula">          
 <table>
     <tr>
     <th>Concepto</th>
@@ -39,21 +36,13 @@
     <td><input id="xu" size="5"><br></td>
     </tr>
 </tr>
-</table>
-<button type="button" onclick="falsa()">Procesar</button> </div>
-        </div>
+</table><br>
+<button type="button" onclick="falsa()">Procesar</button>
       </div>
 
-   
-
-
- 
-
+<div class="resultado">
 <p style="background-color: #f8cdda; color: #f1f1f1; font-weight: bold; color: black; font-size:20px" id="sumando">Resultado: </p>  
-
-
-
-   <script>
+ <script>
     function falsa(a,b){
         
         let xl = document.getElementById("xl").value;
@@ -138,5 +127,6 @@ body.appendChild(tabla);
 tabla.setAttribute("border", "1");
     }
    </script>
+   </div>
 </body>
 </html>
