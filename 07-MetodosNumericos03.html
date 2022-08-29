@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="naruto.css">
+    <title>Ni modo mama, soy otaku</title>
+</head>
+<body>
+    <h1>Bienvenidos a la pagina de la biseccion</h1>
+    <h2>Metodos numericos</h2>
+    <table style="background-color:white, cellspace:5px">
+        <tr>
+            <th>Valores</th>
+            <th>Input</th>
+        </tr>
+        <tr>
+            <td>Introduce el valor: </td>
+            <td><input id="valor1" name="valor1a" size="10"></td>
+        </tr>
+        <tr>
+            <td>Introduce el valor: </td>
+            <td><input id="valor2" name="valor2a" size="10"></td>
+        </tr>
+    </table>
+    <button type="button" onclick="suma()">Sumar</button>
+    <button type="button" onclick="resta()">Resta</button>
+    <p style="background-color: #f8cdda; color: #f1f1f1; font-weight: bold; color: black; font-size:20px" id="sumando">Resultado: </p>
+    <script>
+        function suma(){
+            let valor1=document.getElementById("valor1").value;
+            let valor2=document.getElementById("valor2").value;
+          
+            console.log(valor2);
+            console.log(valor1);
+            let text=parseInt(valor1)+parseInt(valor2);
+            document.getElementById("sumando").innerHTML = text;
+        }
+        function resta(){
+            let valor1=document.getElementById("valor1").value;
+            let valor2=document.getElementById("valor2").value;
+          
+            console.log(valor2);
+            console.log(valor1);
+            let text=parseInt(valor1)-parseInt(valor2);
+            document.getElementById("sumando").innerHTML = text;
+        }
+
+    </script>
+</body>
+</html>
