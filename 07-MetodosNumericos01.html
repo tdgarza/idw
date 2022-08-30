@@ -76,8 +76,6 @@ var hilera = document.createElement("tr");
    console.log("valor del xu " +xu +" Iteracion numero "+i)
    console.log("valor del xr " +xr +" Iteracion numero "+i)
       
-
-
    let exponente=-(xl/m)*t;
    let exponente1=-(xu/m)*t;
    //console.log("Valor del exponente 1: " +exponente);
@@ -108,7 +106,7 @@ var hilera = document.createElement("tr");
     xl=xr;
     console.log("Segundo if porque es positivo" +xr)
    }
-    if(fxl==fxu){
+    if(fxl*fxu==0){
     /*Si f(xl)f(xr) = 0, la raíz es igual a xr; termina el cálculo.*/
     console.log("Tercer if")
     }
