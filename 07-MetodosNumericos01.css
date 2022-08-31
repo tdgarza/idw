@@ -4,8 +4,10 @@ body{
     #1d2b64 35%, #f8cdda 100%);
 }
 h1{
-    color: #f8cdda;
+    color: greenyellow;
     text-shadow: 5px 5px 5px black;
+    font-family: 'Rebellion', sans-serif;
+                                                                                                
 }
 h4{
     color: rgb(255, 255, 255);
