@@ -60,28 +60,31 @@ function myFunction(){
 
    let xl = document.getElementById("xl").value;  
    let xu = document.getElementById("xu").value;
-
-var body = document.getElementsByTagName("body")[0];
-var tabla   = document.createElement("table");
-var tblBody = document.createElement("tbody");
-var hilera = document.createElement("tr");
-
-
-
+do{
    let e0=Math.exp(-xl);
    console.log("valor de e0 " +e0);
    let e1=Math.exp(-xu);
    console.log("valor de e1 " +e1);
-let fxl=e0-xl;
+   let fxl=e0-xl;
   let fxu=e1-xu;
   let numerador=fxu*(xl-xu);
    let denominador=fxl-fxu;
    let xr=xu-(numerador/denominador);
    console.log("valor de e1 " +xr);
-   let e2=Math.exp(-xr);
-   console.log("valor de e2 " +e2);
+   let fxr=Math.exp(-xr);
+   console.log("valor de e2 " +fxr);
+   let xranterior=xr;
+var error=Math.abs((xr-xranterior)/xr)*100;
+   if(fxl*fxr<0){
+    xu=xr;
+    console.log("Si fue menor que cero " +xu);
 
-   
+   }
+   if(fxl*fxr>0){
+    xl=xr;
+    console.log("Si fue mayor que cero " +xl);
+   }
+}while(error>1);
 }
 </script>
 

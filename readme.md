@@ -1,3 +1,4 @@
+# Clase de Metodos numericos, unidad 1 Septiembre 22
 Vamos por el primero del libro
 
 10 de Junio del 22.
