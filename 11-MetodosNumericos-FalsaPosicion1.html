@@ -62,6 +62,7 @@ function myFunction(){
 let xl = document.getElementById("xl").value;
 let xu = document.getElementById("xu").value;
 
+do{
 let e0=Math.exp(-xl);
 let fxl=e0-xl;
 console.log("El valor de la funcion xl: " +fxl);
@@ -69,14 +70,29 @@ let e1=Math.exp(-xu);
 let fxu=e1-xu;
 console.log("El valor de la funcion xu: " +fxu);
 let numerador=fxu*(xl-xu);
-console.log("El valor del numerador: " +numerador);
+//console.log("El valor del numerador: " +numerador);
 let denominador=(fxl-fxu);
-console.log("El valor del denominador: " +denominador);
+//console.log("El valor del denominador: " +denominador);
 let xr=(xu-(numerador/denominador));
 console.log("El valor de xr: " +xr);
 let e2=Math.exp(-xr);
 let fxr=e2-xr;
 console.log("El valor de la funcion xr: " +fxr);
+let xrold=xu;
+console.log("El valor del Xrold: " +xrold);
+var error=Math.abs((xr-xrold)/xr)*100;
+console.log("El valor del error: " +error);
+
+if(fxl*fxu<0){
+    xu=xr;
+    console.log("Primer if porque es negativo: " +xr)
+   }
+   if(fxl*fxu>0){
+    xl=xr;
+    console.log("Segundo if porque es positivo: " +xr)
+   }
+}
+while(error>1);
 }
 </script>
 </body>
