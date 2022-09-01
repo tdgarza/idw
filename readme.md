@@ -1,4 +1,5 @@
 # Clase de Metodos numericos, unidad 1 Septiembre 22
+# Los de mecatronica son Otakus, especialmente los que dijeron que no.
 Vamos por el primero del libro
 
 10 de Junio del 22.
