@@ -56,12 +56,9 @@ caída libre de t = 10 s. Nota: La aceleración de la gravedad es 9.8 m/s2.
 <p style="background-color: rgb(18, 18, 15)#f1f1f1; font-weight: bold; color: black; font-size:20px" id="sumando">Resultado: </p>
 <h1>Metodos numericos de 3A</h1>
 <script>
-
 function myFunction(){
-
 let xl = document.getElementById("xl").value;
 let xu = document.getElementById("xu").value;
-
 do{
 let e0=Math.exp(-xl);
 let fxl=e0-xl;
@@ -78,7 +75,7 @@ console.log("El valor de xr: " +xr);
 let e2=Math.exp(-xr);
 let fxr=e2-xr;
 console.log("El valor de la funcion xr: " +fxr);
-let xrold=xu;
+let xrold=xr;
 console.log("El valor del Xrold: " +xrold);
 var error=Math.abs((xr-xrold)/xr)*100;
 console.log("El valor del error: " +error);

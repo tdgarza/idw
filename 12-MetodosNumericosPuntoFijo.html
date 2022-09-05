@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="07-MetodosNumericos01.css">
+<link href="http://fonts.cdnfonts.com/css/rebellion" rel="stylesheet">
+                
+<title>Metodo de la Falsa Posicion</title>
+</head>
+<body>
+<h1>Metodos Abiertos: Metodo Simple de Punto Fijo</h1>
+<h4>Como se dijo antes, los métodos abiertos emplean una fórmula para predecir la raíz. Esta
+    fórmula puede desarrollarse como una iteración simple de punto fijo (también llamada
+    iteración de un punto o sustitución sucesiva o método de punto fijo), al arreglar la ecuación f(x) = 0 de tal modo que x esté del lado izquierdo de la ecuación.
+</h4>
+
+
+<p style="background-color: blue; color: rgb(245, 246, 253); font-size:20px">Planteamiento del problema.</p>
+<p> La utilidad de la ecuación (6.1) es que proporciona una fórmula para predecir un nuevo valor de x en función del valor anterior de x. De esta manera, dado un valor inicial para la raíz xi, la ecuación (6.1) se utiliza para obtener una nueva aproximación xi+1, expresada por la fórmula iterativa.
+</p>
+<p>Por favor, introduce dos números:</p>
+<p style="background-color: crimson; color: #f1f1f1; font-weight: bold; font-size:20px">Funcion:<br></p>
+<img src="./formula3.png" style="width: 530px"; alt="formula">
+<br>
+<table>
+<tr>
+<th>Concepto</th>
+<th>Valor</th>
+</tr>
+<tr>
+<td>Valor inicial(x): </td>
+<td><input id="x" size="5"><br> </td>
+</tr>
+
+</tr>
+</table>
+<button type="button" onclick="myFunction()">Procesar</button>
+<p style="background-color: yellow; color: #f1f1f1; font-weight: bold; color: black; font-size:20px" id="sumando">Resultado: </p>  
+
+<script>
+function myFunction(){
+let x = document.getElementById("x").value;
+let xrold=0;
+console.log("El valor inicial x: " +x);
+do{
+let e0=Math.exp(-x);
+
+x=e0;
+console.log("El valor de la xi: " +x);
+
+
+var error=Math.abs((x-xrold)/x)*100;
+console.log("El valor del error: " +error);
+
+xrold=x;
+console.log("El valor del Xrold: " +xrold);
+}
+while(error>1);
+}
+let text=xrold;
+document.getElementById("sumando").innerHTML = text;  
+return text;
+</script>
+</body>
+</html>

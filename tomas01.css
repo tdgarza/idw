@@ -48,3 +48,7 @@ body{
 .scroll-area:nth-of-type(5){
     background:#ee09a9;
 }
+img{
+    width: 150px;
+    height: 150px;
+}
