@@ -1,7 +1,8 @@
 body{
     background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, 
-    #1d2b64 35%, #f8cdda 100%);
+    background: linear-gradient(90deg, #72b2e4 0%, 
+    #92e1e2 35%, #f8cdda 100%);
+    
 }
 h1{
     color: greenyellow;
