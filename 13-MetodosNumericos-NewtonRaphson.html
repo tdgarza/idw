@@ -10,10 +10,9 @@
 <title>Metodo de la Falsa Posicion</title>
 </head>
 <body>
-<h1>Metodos Abiertos: Metodo Simple de Punto Fijo</h1>
-<h4>Como se dijo antes, los métodos abiertos emplean una fórmula para predecir la raíz. Esta
-    fórmula puede desarrollarse como una iteración simple de punto fijo (también llamada
-    iteración de un punto o sustitución sucesiva o método de punto fijo), al arreglar la ecuación f(x) = 0 de tal modo que x esté del lado izquierdo de la ecuación.
+<h1>Metodos Abiertos: Metodo de Newton-Raphson</h1>
+<h4>Tal vez, de las fórmulas para localizar raíces, la fórmula de Newton-Raphson sea la más ampliamente utilizada. Si el valor inicial para la raíz es xi, entonces se puede trazar una tangente desde el punto [xi, f(xi)] de la curva. Por lo común, el punto donde esta tangente cruza al eje x representa una aproximación mejorada de la raíz.
+    El método de Newton-Raphson se deduce a partir de esta interpretación geométrica (un método alternativo basado en la serie de Taylor se describe en el cuadro 6.2). De la figura 6.5, se tiene que la primera derivada en x es equivalente a la pendiente:
 </h4>
 
 <p style="background-color: blue; color: rgb(245, 246, 253); font-size:20px">Planteamiento del problema.</p>
@@ -21,7 +20,7 @@
 </p>
 <p>Por favor, introduce dos números:</p>
 <p style="background-color: crimson; color: #f1f1f1; font-weight: bold; font-size:20px">Funcion:<br></p>
-<img src="./formula3.png" style="width: 530px"; alt="formula">
+<img src="./formula4.png" style="width: 400px"; alt="formula">
 <br>
 <table>
 <tr>
@@ -38,7 +37,6 @@
 <button type="button" onclick="myFunction()">Procesar</button>
 <p style="background-color: yellow; color: #f1f1f1; font-weight: bold; color: black; font-size:20px" id="sumando">Resultado: </p>  
 
-<script src="13-MetodosNumericos-NewtonRaphson.js"> 
-</script>
+<script src="13-MetodosNumericos-NewtonRaphson.js"> </script>
 </body>
 </html>
