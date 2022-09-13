@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Arrays</h1>
+
+    <table>
+        <tr>
+        <th>x</th>
+        <th>y</th>
+        <th>z</th>
+        <th>b</th>
+        </tr>
+        <tr>
+        <td><input id="a" size="5"><br> </td>
+        <td><input id="b" size="5"><br> </td>
+        <td><input id="c" size="5"><br> </td>
+        <td><input id="d" size="5"><br> </td>
+
+        </tr>
+        <tr>
+        <td><input id="e" size="5"><br> </td>
+        <td><input id="f" size="5"><br> </td>
+        <td><input id="g" size="5"><br> </td>
+        <td><input id="h" size="5"><br> </td>
+    </tr>
+    <tr>
+        <td><input id="i" size="5"><br> </td>
+        <td><input id="j" size="5"><br> </td>
+        <td><input id="k" size="5"><br> </td>
+        <td><input id="l" size="5"><br> </td>
+    </tr>
+        </tr>
+        </table>
+        <button type="button" onclick="myFunction()">Procesar</button>
+        <p style="background-color: yellow; color: #f1f1f1; font-weight: bold; color: black; font-size:20px" id="sumando">Resultado: </p>  
+        <script>
+            function myFunction(){
+    let a = document.getElementById("a").value;
+    let b = document.getElementById("b").value;
+    let c = document.getElementById("c").value;
+    let d = document.getElementById("d").value;
+    let e = document.getElementById("e").value;
+    let f = document.getElementById("f").value;
+    let g = document.getElementById("g").value;
+    let h = document.getElementById("h").value;
+    let i = document.getElementById("i").value;
+    let j = document.getElementById("j").value;
+    let k = document.getElementById("k").value;
+    let l = document.getElementById("l").value;
+    console.log("El valor de a: " +a);
+
+    var columna1 = [a,e,i];
+    var columna2 = [b,f,j];
+    var columna3 = [c,g,k];
+    var columna4 = [d,h,l];
+    console.log("Columna: "+columna1);
+
+        var table= document.createElement('table'),
+            thead = document.createElement('thead'),
+            tbody = document.createElement('tbody'),
+            th,
+            tr,
+            td;
+            th = document.createElement('th'),          
+            th.innerHTML="x";
+            table.appendChild(th);
+            th = document.createElement('th'), 
+            th.innerHTML= "y";
+            table.appendChild(th);
+            th = document.createElement('th'), 
+            th.innerHTML= "z";
+            table.appendChild(th);
+            th = document.createElement('th'),
+            th.innerHTML= "b";
+
+            table.appendChild(th);
+            table.appendChild(thead);            
+            table.appendChild(tbody);
+            document.body.appendChild(table);
+         
+            for(var m=0;m<columna1.length;m++){
+            tr = document.createElement('tr'),
+            //for county
+            td= document.createElement('td');
+            td.innerHTML=columna1[m];
+            tr.appendChild(td);
+
+            //for capital
+            td = document.createElement('td');
+            td.innerHTML=columna2[m];
+            tr.appendChild(td);
+            tbody.appendChild(tr);
+
+            td = document.createElement('td');
+            td.innerHTML=columna3[m];
+            tr.appendChild(td);
+            tbody.appendChild(tr);
+            td = document.createElement('td');
+            td.innerHTML=columna4[m];
+            tr.appendChild(td);
+            tbody.appendChild(tr);
+         }
+    
+    let text;
+    document.getElementById("sumando").innerHTML = text;  
+    }
+        </script>
+</body>
+</html>
