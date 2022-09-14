@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="arrays.css">
+    <link rel="stylesheet" href="arrays1.css">
     <title>Document</title>
 </head>
 <body>
-    <h1>Arrays</h1>
-
+    <h1>Gauss V.0.1</h1>
+    <div class="ocean">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+      </div>
     <table>
         <tr>
         <th>x</th>
@@ -37,8 +43,9 @@
     </tr>
         </tr>
         </table>
-        <button type="button" onclick="myFunction()">Procesar</button>
-        <p style="background-color: yellow; color: #f1f1f1; font-weight: bold; color: black; font-size:20px" id="sumando">Resultado: </p>  
+        <button  type="button" onclick="myFunction()">Procesar</button>
+        <p style="background-color: #f4d35e; color: #f1f1f1; font-weight: bold; color: black; font-size:20px" id="sumando">Resultado: </p>  
+        <a href="#" class="myButton">PROCESAR</a>
         <script>
             function myFunction(){
     let a = document.getElementById("a").value;
@@ -107,7 +114,7 @@
             tbody.appendChild(tr);
          }
     
-    let text;
+    let text=a*b*c;
     document.getElementById("sumando").innerHTML = text;  
     }
         </script>
