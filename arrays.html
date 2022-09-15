@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="arrays.css">
     <link rel="stylesheet" href="arrays1.css">
+    <link href="http://fonts.cdnfonts.com/css/garoa-hacker-clube" rel="stylesheet">
+    <link href="http://fonts.cdnfonts.com/css/ballado" rel="stylesheet">
+                
     <title>Document</title>
 </head>
 <body>
@@ -17,10 +20,10 @@
       </div>
     <table>
         <tr>
-        <th>x</th>
-        <th>y</th>
-        <th>z</th>
-        <th>b</th>
+        <th style="font-size: 20px;">x</th>
+        <th style="font-size: 20px;">y</th>
+        <th style="font-size: 20px;">z</th>
+        <th style="font-size: 20px;">b</th>
         </tr>
         <tr>
         <td><input id="a" size="5"><br> </td>
@@ -44,8 +47,8 @@
         </tr>
         </table>
         <button  type="button" onclick="myFunction()">Procesar</button>
-        <p style="background-color: #f4d35e; color: #f1f1f1; font-weight: bold; color: black; font-size:20px" id="sumando">Resultado: </p>  
-        <a href="#" class="myButton">PROCESAR</a>
+        <p style="background-color: #f4d35e; color: #f1f1f1; font-weight: bold; color: black; font-size:20px" id="determinante1">Resultado: </p>  
+  
         <script>
             function myFunction(){
     let a = document.getElementById("a").value;
@@ -60,14 +63,12 @@
     let j = document.getElementById("j").value;
     let k = document.getElementById("k").value;
     let l = document.getElementById("l").value;
-    console.log("El valor de a: " +a);
-
+   
     var columna1 = [a,e,i];
     var columna2 = [b,f,j];
     var columna3 = [c,g,k];
     var columna4 = [d,h,l];
-    console.log("Columna: "+columna1);
-
+    
         var table= document.createElement('table'),
             thead = document.createElement('thead'),
             tbody = document.createElement('tbody'),
@@ -113,9 +114,18 @@
             tr.appendChild(td);
             tbody.appendChild(tr);
          }
+    let det=(a*f*k)+(b*g*i)+(e*j*c)-(i*f*c)-(g*a*j)-(b*e*k);
+    let det1=(d*f*k)+(b*g*l)+(h*j*c)-(l*f*c)-(d*g*j)-(b*h*k);
+    let det2=(a*h*k)+(d*g*i)+(e*l*c)-(i*c*h)-(g*a*l)-(d*e*k);
+    let det3=(a*f*l)+(b*h*i)+(e*j*d)-(i*f*d)-(h*a*j)-(l*e*b);
     
-    let text=a*b*c;
-    document.getElementById("sumando").innerHTML = text;  
+
+    console.log("Valor del primer determinante: " +det);
+    console.log("Valor del segundo determinante: " +det1);
+
+    document.getElementById("determinante1").innerHTML = det1;  
+    //document.getElementById("determinante2").innerHTML = det2; 
+    //document.getElementById("determinante3").innerHTML = det3; 
     }
         </script>
 </body>

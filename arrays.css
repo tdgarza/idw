@@ -1,7 +1,36 @@
 body{
     background-color: #2e2f5b;
+text-align: center;
+font-family: 'Ballado', sans-serif;
+                                                
+
+}
+table{
+    width: 290px;
+   align-items: center;
+   background-color: #FAF0CA;
+   margin-left: auto;
+   margin-right: auto;
+   border-style: groove;
+   border-color: #f4d35e;
+   opacity: 50%;
+}
+tr,th,td{
+    color: #2e2f5b;
+}
+button{
+    background-color: #505581;
+    color: #FAF0CA;
+    width: 300px;
+    height: 50px;
+    font-size: 20px;
+    font-family: 'Ballado', sans-serif;
+                                                
+    
 }
 h1{
     color: #f4d35e;
     text-shadow: 2px 1px 2px #2e2f5b;
+    font-family: 'Garoa Hacker Clube', sans-serif;
+                                                
 }
