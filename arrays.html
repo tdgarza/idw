@@ -48,7 +48,8 @@
         </table>
         <button  type="button" onclick="myFunction()">Procesar</button>
         <p style="background-color: #f4d35e; color: #f1f1f1; font-weight: bold; color: black; font-size:20px" id="determinante1">Resultado: </p>  
-  
+        <p style="background-color: #f4d35e; color: #f1f1f1; font-weight: bold; color: black; font-size:20px" id="determinante2">Resultado: </p>  
+        <p style="background-color: #f4d35e; color: #f1f1f1; font-weight: bold; color: black; font-size:20px" id="determinante3">Resultado: </p>  
         <script>
             function myFunction(){
     let a = document.getElementById("a").value;
@@ -92,14 +93,13 @@
             table.appendChild(tbody);
             document.body.appendChild(table);
          
-            for(var m=0;m<columna1.length;m++){
+            for(var m=0;m<3;m++){
             tr = document.createElement('tr'),
-            //for county
             td= document.createElement('td');
             td.innerHTML=columna1[m];
             tr.appendChild(td);
+            console.log("Columna: " +columna1[m])
 
-            //for capital
             td = document.createElement('td');
             td.innerHTML=columna2[m];
             tr.appendChild(td);
@@ -109,6 +109,7 @@
             td.innerHTML=columna3[m];
             tr.appendChild(td);
             tbody.appendChild(tr);
+
             td = document.createElement('td');
             td.innerHTML=columna4[m];
             tr.appendChild(td);
@@ -122,10 +123,13 @@
 
     console.log("Valor del primer determinante: " +det);
     console.log("Valor del segundo determinante: " +det1);
+    console.log("Valor del tercer determinante: " +det2);
+    console.log("Valor del cuarto determinante: " +det3);
+    console.log("Columna length: " +columna1.length);
 
     document.getElementById("determinante1").innerHTML = det1;  
-    //document.getElementById("determinante2").innerHTML = det2; 
-    //document.getElementById("determinante3").innerHTML = det3; 
+    document.getElementById("determinante2").innerHTML = det2; 
+    document.getElementById("determinante3").innerHTML = det3; 
     }
         </script>
 </body>
