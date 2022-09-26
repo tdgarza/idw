@@ -12,7 +12,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Metodo de Cramer V.0.1</h1>
+    <h1>Metodo de Gauss Simple V.0.1</h1>
     <div class="ocean">
         <div class="wave"></div>
         <div class="wave"></div>
@@ -112,20 +112,43 @@
             tr.appendChild(td);
             tbody.appendChild(tr);
          }
-         let det=(a*f*k)+(b*g*i)+(e*j*c)-(i*f*c)-(g*a*j)-(b*e*k);
-         let det1=(d*f*k)+(b*g*l)+(h*j*c)-(l*f*c)-(d*g*j)-(b*h*k);
-         let det2=(a*h*k)+(d*g*i)+(e*l*c)-(i*c*h)-(g*a*l)-(d*e*k);
-         let det3=(a*f*l)+(b*h*i)+(e*j*d)-(i*f*d)-(h*a*j)-(l*e*b);
-         
-         console.log("Valor del primer determinante: " +det);
-         console.log("Valor del segundo determinante: " +det1);
-         console.log("Valor del tercer determinante: " +det2);
-         console.log("Valor del cuarto determinante: " +det3);
-         console.log("Columna length: " +columna1.length);
-         
-         document.getElementById("determinante1").innerHTML = det1/det;  
-         document.getElementById("determinante2").innerHTML = det2/det; 
-         document.getElementById("determinante3").innerHTML = det3/det; 
+         let coeficiente1=(e/a);
+         let coeficiente2=(i/a);
+         let aprima=coeficiente1*a;
+         let bprima=coeficiente1*b;
+         let cprima=coeficiente1*c;
+         let dprima=coeficiente1*d;
+         let enueva=aprima-e;
+         let fnueva=bprima-f;
+         let gnueva=cprima-g;
+         let hnueva=dprima-h;
+         let aprima1=coeficiente2*a;
+         let bprima1=coeficiente2*b;
+         let cprima1=coeficiente2*c;
+         let dprima1=coeficiente2*d;
+         let inueva=aprima1-i;
+         let jnueva=bprima1-j;
+         let knueva=cprima1-k;
+         let lnueva=dprima1-l;
+         let coeficiente3=jnueva/fnueva;
+         let fnueva1=coeficiente3*fnueva;
+         let gnueva1=coeficiente3*gnueva;
+         let hnueva1=coeficiente3*hnueva;
+         let jnueva1=fnueva1-jnueva;
+         let knueva1=gnueva1-knueva;
+         let lnueva1=hnueva1-lnueva;
+
+         let x3=lnueva1/knueva1;
+         let x2=(hnueva-gnueva*x3)/fnueva;
+         let x1=(d-b*x2-c*x3)/a;
+
+         console.log("Valor del primer determinante: " +x1);
+         console.log("Valor del primer determinante: " +x2);
+         console.log("Valor del primer determinante: " +x3);
+         document.getElementById("determinante1").innerHTML = x1;  
+         document.getElementById("determinante2").innerHTML = x2;  
+         document.getElementById("determinante3").innerHTML = x3;  
+     
         }
         </script>
 </body>

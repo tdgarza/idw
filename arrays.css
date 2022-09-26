@@ -6,29 +6,31 @@ font-family: 'Ballado', sans-serif;
 
 }
 table{
-    width: 290px;
+width: 300px;
+height: 150px;
    align-items: center;
    background-color: #FAF0CA;
    margin-left: auto;
    margin-right: auto;
    border-style: groove;
    border-color: #f4d35e;
-   opacity: 50%;
+   
    border-collapse: collapse;
-
+   box-shadow: 10px 10px 10px #FAF0CA;
+border-width: 2px;
 }
 tr,th,td{
-    color: #2e2f5b;
+    color: #1a1a41;
+    border-width: 5PX;
 }
 button{
     background-color: #505581;
     color: #FAF0CA;
     width: 300px;
-    height: 50px;
+    height: 40px;
     font-size: 20px;
     font-family: 'Ballado', sans-serif;
-                                                
-    
+    box-shadow: 5px 5px 10px #7c80a4;
 }
 h1{
     color: #f4d35e;
