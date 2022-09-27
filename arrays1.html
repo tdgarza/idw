@@ -49,7 +49,7 @@
         <br><button style="text-shadow: 1px 1px #9bb9ee;" type="button" onclick="myFunction()">Procesar</button>
         <p style="background-color: #9bb9ee; color: #f1f1f1; font-weight: bold; color: rgb(83, 82, 82); font-size:20px" id="determinante1">Resultado: </p>  
         <p style="background-color: #9bb9ee; color: #f1f1f1; font-weight: bold; color: rgb(83, 82, 82); font-size:20px" id="determinante2">Resultado: </p>  
-        <p style="background-image: repeating-linear-gradient(-45deg, #ffffff 0px, #ffffff 20px, #b1e0ff 20px, #b1e0ff 40px); color: #f1f1f1; font-weight: bold; color: rgb(83, 82, 82); font-size:20px" id="determinante3">Resultado: </p>  
+        <p style="background-color: #9bb9ee; color: #f1f1f1; font-weight: bold; color: rgb(83, 82, 82); font-size:20px" id="determinante3">Resultado: </p>  
         <script>
 
     function myFunction(){
@@ -70,6 +70,8 @@
         var columna2 = [b,f,j];
         var columna3 = [c,g,k];
         var columna4 = [d,h,l];
+        var arreglo =[{a,b,c,d},{e,f,g,h},{i,j,k,l}];
+        console.log("Valor del array " +arreglo);
     
         var table= document.createElement('table'), thead = document.createElement('thead'),
             tbody = document.createElement('tbody'), th, tr, td;
